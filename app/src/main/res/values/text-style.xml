@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DirectiionText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorTextB1</item>
+        <item name="android:textSize">@dimen/textSizeT2</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1</item>
+    </style>
+
+    <style name="LineNumberText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#1d211b</item>
+        <item name="android:textSize">@dimen/textSizeT3</item>
+    </style>
+
+    <style name="Time" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorTextB2</item>
+        <item name="android:textSize">@dimen/textSizeT2</item>
+    </style>
+</resources>

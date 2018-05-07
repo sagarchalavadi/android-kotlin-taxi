@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/direction"
+        style="@style/DirectiionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defaultMargin"
+        android:layout_marginTop="@dimen/defaultMargin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/line_num"
+        style="@style/LineNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defaultMargin"
+        android:layout_marginTop="@dimen/textbetweenMargin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/direction" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/timeStamp"
+        style="@style/LineNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/defaultMargin"
+        android:layout_marginTop="@dimen/textbetweenMargin"
+        app:layout_constraintBottom_toBottomOf="@id/direction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/direction" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listdivider"
+        android:layout_marginEnd="@dimen/defaultMargin"
+        android:layout_marginStart="@dimen/defaultMargin"
+        android:layout_marginTop="@dimen/defaultMargin"
+        android:background="@color/listDividerColor"
+        app:layout_constraintTop_toBottomOf="@id/line_num" />
+
+</android.support.constraint.ConstraintLayout>

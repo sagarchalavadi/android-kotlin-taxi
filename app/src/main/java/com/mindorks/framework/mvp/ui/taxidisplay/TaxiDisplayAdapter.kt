@@ -12,7 +12,8 @@ import com.mindorks.framework.mvp.ui.taxidisplay.model.PoiList
 /**
  * Created by Akki on 5/7/2018.
  */
-class TaxiDisplayAdapter (val carList : List<PoiList>?):RecyclerView.Adapter<TaxiDisplayAdapter.MyViewHolder>() {
+class TaxiDisplayAdapter (val carList : List<PoiList>?,listener:OnTaxiSelect):RecyclerView.Adapter<TaxiDisplayAdapter.MyViewHolder>() {
+    var mlistener=listener
     override fun getItemCount(): Int {
        return carList!!.size
     }
@@ -25,6 +26,9 @@ class TaxiDisplayAdapter (val carList : List<PoiList>?):RecyclerView.Adapter<Tax
 
     override fun onBindViewHolder(holder:MyViewHolder, position: Int) {
         holder.line.text=carList?.get(position)?.fleetType
+        holder.direction.text=carList?.get(position)?.distance + " km"
+
+        holder.itemView.setOnClickListener { mlistener.onCallback(position)}
     }
 
  class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

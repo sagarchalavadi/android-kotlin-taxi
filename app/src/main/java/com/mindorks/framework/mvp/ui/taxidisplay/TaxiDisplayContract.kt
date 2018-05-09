@@ -1,5 +1,6 @@
 package com.mindorks.framework.mvp.ui.taxidisplay
 
+import com.google.android.gms.maps.model.LatLng
 import com.mindorks.framework.mvp.ui.base.interactor.MVPInteractor
 import com.mindorks.framework.mvp.ui.base.presenter.MVPPresenter
 import com.mindorks.framework.mvp.ui.base.view.MVPView
@@ -14,6 +15,8 @@ class TaxiDisplayContract {
 
     interface View : MVPView {
         fun displayTaxiList(list:List<PoiList>?)
+        fun getCurrentLatitude():Double
+        fun getCurrentLongitude():Double
     }
 
     interface Presenter<V : View, I : Interactor> : MVPPresenter<V, I> {

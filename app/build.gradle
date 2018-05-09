@@ -9,6 +9,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.mindorks.framework.mvp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -98,4 +99,6 @@ dependencies {
 
     // Android Kotlin Extension
     implementation "androidx.core:core-ktx:$rootProject.androidKTXVersion"
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.google.android.gms:play-services:9.8.0'
 }

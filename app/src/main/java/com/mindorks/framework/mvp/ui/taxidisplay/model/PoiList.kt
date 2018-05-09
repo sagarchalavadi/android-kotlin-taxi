@@ -23,12 +23,14 @@ data class PoiList(
         var fleetType: String? = null,
         @SerializedName("heading")
         @Expose
-        var heading: Double? = null) : Parcelable {
+        var heading: Double? = null,
+        var distance: String) : Parcelable {
     constructor(source: Parcel) : this(
             source.readValue(Int::class.java.classLoader) as Int?,
             source.readParcelable<Coordinate>(Coordinate::class.java.classLoader),
             source.readString(),
-            source.readValue(Double::class.java.classLoader) as Double?
+            source.readValue(Double::class.java.classLoader) as Double?,
+            source.readString()
     )
 
     override fun describeContents() = 0
@@ -38,6 +40,7 @@ data class PoiList(
         writeParcelable(coordinate, 0)
         writeString(fleetType)
         writeValue(heading)
+        writeString(distance)
     }
 
     companion object {
@@ -48,4 +51,5 @@ data class PoiList(
         }
     }
 }
+
 

@@ -3,6 +3,10 @@
   package="com.mindorks.framework.mvp">
   
   <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+
 
   <application
     android:allowBackup="false"
@@ -12,6 +16,11 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDwdKMruDMG-BFUmWM7UwBW1jA_n5O-Z38"/>
+
     <activity android:name=".ui.splash.view.SplashMVPActivity">
 
     </activity>
@@ -26,10 +35,10 @@
     <activity android:name=".ui.taxidisplay.view.TaxiDisplayActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
-
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity android:name=".ui.taxibook.view.TaxiBookActivity"/>
   </application>
 
 </manifest>
